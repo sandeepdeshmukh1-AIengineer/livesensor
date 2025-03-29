@@ -1,5 +1,5 @@
-pymongo==4.2.0
-pandas 
+pymongo[srv]==4.2.0
+pandas
 numpy
 scikit-learn
 pymongo
