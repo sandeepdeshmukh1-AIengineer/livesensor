@@ -1,0 +1,2 @@
+DATABASE_NAME="deshmukh"
+COLLECTION_NAME="sensor"
