@@ -4,7 +4,9 @@ numpy
 scikit-learn
 pymongo
 python-dotenv
-pyYAML
+PyYAML
 dill
-scipy
--e .
+scipy 
+imblearn==0.0
+xgboost==1.6.2
+-e .   #editable mode 

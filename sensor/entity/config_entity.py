@@ -41,6 +41,7 @@ class DataIngestionConfig:
             self.collection_name: str = training_pipeline.DATA_INGESTION_COLLECTION_NAME
 
 
+
 class DataValidationConfig:
 
 
@@ -84,8 +85,9 @@ class DataTransformationConfig:
         
         
         self.transformed_object_file_path: str = os.path.join( self.data_transformation_dir, training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
-            training_pipeline.PREPROCESSING_OBJECT_FILE_NAME,)
-        
+            training_pipeline.PREPROCSSING_OBJECT_FILE_NAME,)
+
+   
 
 class ModelTrainerConfig:
 
@@ -121,6 +123,10 @@ class ModelEvaluationConfig:
 
         
         self.change_threshold = training_pipeline.MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+
+
+
+
 
 class ModelPusherConfig:
 

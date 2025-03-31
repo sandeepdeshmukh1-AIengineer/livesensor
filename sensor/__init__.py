@@ -1,8 +1,3 @@
-
-import os
-
 from dotenv import load_dotenv
-
-print('reading the file .env')
-
+print(f"for reading the .env file")
 load_dotenv()

@@ -5,9 +5,7 @@ import os
 import dill
 import sys
 from sensor.exception import SensorException
-
 from sensor.logger import logging
-
 
 
 def read_yaml_file(file_path:str)->dict:
@@ -33,7 +31,7 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
 
     except Exception as e:
         raise SensorException(e, sys)
-    
+
 
 
 def save_numpy_array_data(file_path: str, array: np.array):
@@ -79,6 +77,7 @@ def save_object(file_path: str, obj: object) -> None:
     
 
 
+
 def load_object(file_path: str, ) -> object:
     try:
         if not os.path.exists(file_path):
@@ -87,3 +86,6 @@ def load_object(file_path: str, ) -> object:
             return dill.load(file_obj)
     except Exception as e:
         raise SensorException(e, sys) from e
+
+
+

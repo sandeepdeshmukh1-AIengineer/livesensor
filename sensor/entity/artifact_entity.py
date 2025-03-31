@@ -3,22 +3,23 @@ from dataclasses import dataclass
 @dataclass
 
 class DataIngestionArtifact:
-    trained_file_path : str
-    test_file_path : str
+    trained_file_path: str
+    test_file_path: str 
 
 
 
 
-@dataclass 
+@dataclass
 class DataValidationArtifact:
-    validation_status: bool 
-    valid_train_file_path: str 
-    valid_test_file_path: str 
-    invalid_train_file_path: str 
-    invalid_test_file_path: str 
+    validation_status: bool
+    valid_train_file_path: str
+    valid_test_file_path: str
+    invalid_train_file_path: str
+    invalid_test_file_path: str
     drift_report_file_path: str
 
 
+    
 @dataclass
 class DataTransformationArtifact:
     transformed_object_file_path: str
@@ -40,6 +41,7 @@ class ModelTrainerArtifact:
 
 
 
+
 @dataclass
 
 class ModelEvaluationArtifact:
@@ -49,10 +51,13 @@ class ModelEvaluationArtifact:
     best_model_path: str
     trained_model_path: str
     train_model_metric_artifact: ClassificationMetricArtifact
-    best_model_metric_artifact: ClassificationMetricArtifact  
+    best_model_metric_artifact: ClassificationMetricArtifact
+
 
 
 @dataclass
 class ModelPusherArtifact:
     saved_model_path:str   
     model_file_path:str
+
+    

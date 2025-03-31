@@ -3,15 +3,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/hello")
-async def hello():
-    return {"message":"Hello Python"}
-
-@app.get("/hello/{name}")
-async def hello(name):
-    return f"hello !!!{name} is your server running ??"
-
-
 
 indian_places = {
     'delhi': ['Red Fort', 'Qutub Minar', 'India Gate'],
@@ -21,6 +12,15 @@ indian_places = {
     'goa': ['Baga Beach', 'Calangute Beach', 'Dudhsagar Falls']
 }
 
+# @app.get("/hello")
+# async def hello():
+#     return {"message": "Hello World"}
+
+
+
+# @app.get("/hello/{name}")
+# async def hello(name):
+#     return f" this is my python class {name}"
 
 @app.get("/get_items/{name}")
 async def hello(name):

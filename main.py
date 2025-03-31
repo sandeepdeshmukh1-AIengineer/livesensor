@@ -1,4 +1,5 @@
-from sensor.configuration.mongodb_db_connection import MongoDBClient
+
+from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.exception import SensorException
 import os , sys
 from sensor.logger import logging
@@ -7,7 +8,7 @@ from sensor.logger import logging
 from sensor.pipeline.training_pipeline import TrainPipeline
 from sensor.utils.main_utils import load_object
 from sensor.ml.model.estimator import ModelResolver,TargetValueMapping
-from sensor.configuration.mongodb_db_connection import MongoDBClient
+from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.exception import SensorException
 import os,sys
 from sensor.logger import logging
@@ -92,7 +93,7 @@ async def predict():
         df['predicted_column'].replace(TargetValueMapping().reverse_mapping,inplace=True)
 
 
-        # get the prediction output as you want
+        # get the prediction output as you wnat 
 
 
     except  Exception as e:
@@ -114,5 +115,33 @@ def main():
 
 
 if __name__ == "__main__":
+
+    # file_path="/Users/myhome/Downloads/sensorlive/aps_failure_training_set1.csv"
+    # database_name="ineuron"
+    # collection_name ="sensor"
+    # dump_csv_file_to_mongodb_collection(file_path,database_name,collection_name)
     app_run(app ,host=APP_HOST,port=APP_PORT)
 
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    # try:
+    #     test_exception()
+    # except Exception as e:
+    #     print(e)

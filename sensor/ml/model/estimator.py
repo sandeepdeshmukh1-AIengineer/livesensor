@@ -1,7 +1,7 @@
-import os
 from sensor.constant.training_pipeline import SAVED_MODEL_DIR,MODEL_FILE_NAME
 
 
+import os
 class TargetValueMapping:
     def __init__(self):
         self.neg: int = 0
@@ -14,6 +14,8 @@ class TargetValueMapping:
         mapping_response = self.to_dict()
         return dict(zip(mapping_response.values(), mapping_response.keys()))
     
+
+
 
 class SensorModel:
 
@@ -32,7 +34,6 @@ class SensorModel:
         except Exception as e:
             raise e
         
-
 
 class ModelResolver: 
 

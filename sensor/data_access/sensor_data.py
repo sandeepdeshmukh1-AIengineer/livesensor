@@ -4,7 +4,7 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 import json
-from sensor.configuration.mongodb_db_connection import MongoDBClient
+from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.constant.database import DATABASE_NAME
 from sensor.exception import SensorException
 
